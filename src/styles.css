@@ -1,1 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600;700;800&display=swap');
+
+
+/* color assets */
+:root{
+    --main-color:#2ed573;
+    --secondary-color:#7bed9f;
+    --balck-color:#2f3542;
+    --grey-color:#a4b0be;
+    --white-color:#ffffff;
+    --alternative-color:#1e90ff;
+    --ground--color:#f1f2f6;
+}
+
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    margin: 5px;
+  }
+.sidebar{
+    padding: 15px;
+    margin: 5px;
+    width: 180px;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: var(--white-color);
+}
+.sidebar a.logout-sm{
+    display: none;
+  }
+.sidebar a{
+    display: block;
+    padding: 16px;
+    color: var(--balck-color);
+    text-decoration: none;
+}
+.sidebar a.active{
+    background-color:var(--alternative-color);
+    color: var(--white-color);
+}
+
+.sidebar a:hover:not(.active){
+    background-color:var(--main-color);
+    color: var(--white-color);
+    border-radius: 13px;
+
+}
+
+.sidebar a:hover:is(.logo){
+    rotate: 7deg;
+    color: var(--balck-color);
+    background-color:white;
+    z-index: 0;
+}
+
+.sidebar .navigator{
+    display: none;
+}
+div.content {
+    margin-left: 190px;
+    padding: 1px 16px;
+    height: 1000px;
+    background-color: var(--ground--color);
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      /* height: 51px; */
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+    .sidebar .logo{
+        display: none;
+    }
+    hr{
+        display: none;
+    }
+    .sidebar{
+        padding: 0;
+        margin: 0;
+    }
+    .logout{
+        display: none;
+      }
+    .sidebar a.logout-sm{
+        display: block;
+      }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+    .sidebar .logo{
+        display: block;
+    }
+    
+.sidebar .navigator{
+    display: block;
+}
+  .logout{
+    display: none;
+  }
+  .sidebar a.logout-sm{
+    display: block;
+  }
+  }
