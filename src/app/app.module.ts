@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NewsComponent } from './news/news.component';
 import { AppRoutingModule } from './admin/app-routing.module';
+import { FilesComponent } from './files/files.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    NewsComponent
+    NewsComponent,
+    FilesComponent
   ],
   imports: [
     BrowserModule,

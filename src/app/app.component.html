@@ -4,12 +4,8 @@
   </div>
   <a class="fw-bold logo mb-2 h5"><i class="fa-brands fa-slack"></i> TryApps</a>
   <hr>
-  <div id="menu" class="collapse show">
-    <a routerLink="/dashboard" routerLinkActive="active" class="h6"><i class="fa-brands fa-windows"></i> Dashboard</a>
-    <a routerLink="/news" routerLinkActive="active" class="h6"><i class="fa-regular fa-newspaper"></i> News</a>
-    <a href="#contact" class="h6"><i class="fa-regular fa-folder"></i> Files</a>
-    <a href="#about" class="h6"><i class="fa-solid fa-comment-sms"></i> Messages</a>
-    <a href="#setting" class="h6"><i class="fa-solid fa-gear"></i> Setting</a>
+  <div id="menu" class="collapse show" *ngFor="let menu of menus">
+    <a routerLink="{{menu.url}}" routerLinkActive="active" class="h6"><i class="{{menu.icon}}"></i> {{menu.name}}</a>
     <a href="#setting" class="h6 logout-sm"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
   </div>
   <hr>

@@ -1,0 +1,21 @@
+[
+    {
+        "id":1,
+        "name":"Dashboard",
+        "url":"/dashboard",
+        "icon":"fa-brands fa-windows"
+    },
+    
+    {
+        "id":2,
+        "name":"News",
+        "url":"/news",
+        "icon":"fa-regular fa-newspaper"
+    },
+    {
+        "id":3,
+        "name":"Files",
+        "url":"/file",
+        "icon":"fa-regular fa-folder"
+    }
+]
